@@ -1,0 +1,98 @@
+.input {
+  font-size: 20px;
+  color: var(--white-color);
+  /* background-color: var(--white-color); */
+  font-style: normal;
+  outline: none;
+  color: white;
+  transition: box-shadow var(--hover-time) ease;
+}
+
+.input.sale {
+  padding: 25px 50px;
+  color: white;
+  max-width: 475px;
+  width: 100%;
+  height: 75px;
+
+  font-weight: 600;
+
+  border: 1px solid var(--white-color);
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.input.order {
+  padding: 25px;
+
+  max-width: 446px;
+  width: 100%;
+  height: 72px;
+
+  font-weight: 500;
+
+  border: 1px solid var(--black-color);
+  border-radius: 20px;
+
+  color: blue;
+}
+
+.input.filter {
+  padding: 12px 10px;
+
+  width: 100px;
+  height: 40px;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  border: 1px solid var(--black-color);
+  border-radius: 7px;
+
+  color: green;
+
+  box-shadow: 0 0 0 transparent;
+
+  cursor: pointer;
+  outline: none;
+
+  transition: border-color var(--hover-time) ease;
+}
+
+.input.filter::-webkit-outer-spin-button,
+.input.filter::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input.error {
+  position: relative;
+  z-index: 20;
+
+  color: var(--error-color);
+  border-color: transparent;
+  box-shadow: inset 0 0 10px 2px var(--error-color);
+}
+
+@media (min-width: 762px) {
+  input:focus {
+    box-shadow: inset 0 0 19px var(--black-color);
+  }
+
+  .discont:focus {
+    box-shadow: inset 0 0 0 transparent;
+  }
+
+  .input.filter:hover {
+    border-color: var(--ui-color);
+  }
+
+  .input.filter:hover::placeholder {
+    color: var(--ui-color);
+  }
+}
+
+@media (max-width: 762px) {
+  .input.sale {
+    max-width: 100%;
+  }
+}

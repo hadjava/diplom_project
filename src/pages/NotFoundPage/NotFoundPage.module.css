@@ -1,0 +1,9 @@
+.notfound img {
+	width: 100%;
+}
+
+@media (max-width: 762px) {
+	.notfound {
+		margin-top: 60px;
+	}
+}

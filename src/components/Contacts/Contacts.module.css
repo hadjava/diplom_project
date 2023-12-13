@@ -1,0 +1,101 @@
+.contacts {
+  padding: 50px 0;
+  display: grid;
+  gap: 70px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две колонки для Phone и Socials */
+  gap: 30px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.phone {
+  position: relative;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 91px;
+  cursor: pointer;
+  transition: color var(--hover-time) ease;
+}
+
+.media_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Отступ между Socials */
+}
+
+.media_item {
+  display: flex;
+  align-items: center;
+  color: var(--black-color);
+  cursor: pointer;
+  transition: color var(--hover-time) ease;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Отступ между Address и Working Hours */
+}
+
+.address_wrapper {
+  margin: 25px 0 20px;
+}
+
+.address_link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1px;
+}
+
+.working_time {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+@media (min-width: 762px) {
+  .phone:hover,
+  .media_item:hover {
+    color: var(--ui-color);
+  }
+
+  .phone:active,
+  .media_item:active svg {
+    top: 1px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .links,
+  .address {
+    text-align: center;
+  }
+
+  .media_list {
+    justify-content: center;
+  }
+
+  .phone {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 762px) {
+  .phone {
+    font-size: 30px;
+  }
+
+  .address_link {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
